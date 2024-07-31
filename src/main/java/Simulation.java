@@ -2,8 +2,10 @@ public class Simulation {
     private final Vehicle vehicle;
 
     public Simulation(Vehicle v) {
+
         this.vehicle = v;
     }
+
     // Mars Simulation Source Code.
     static String version = "2.0"; /* The Version of the program */
 
@@ -74,8 +76,19 @@ public class Simulation {
 
     public static void main(String[] args) {
         // create a new Simulation object with a random starting altitude
+        Vehicle vehicle = new Vehicle(randomaltitude());
+
         // create a new BurnInputStream
+        BurnStream burnSource = new BurnInputStream();
+
+        //Create a new simulation object with the vehicle
+        Simulation simulation = new Simulation(vehicle);
+
         // pass the new BurnInputStream to the runSimulation method
+        int finalStatus = simulation.runSimulation(burnSource);
+
+        //Print the final status
+        System.out.println("Final status: " + finalStatus);
     }
 
 }
