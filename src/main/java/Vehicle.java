@@ -10,6 +10,8 @@ public class Vehicle {
     /* The rate in which the spaceship descents in free fall (in ten seconds) */
 
     // Various end-of-game messages and status result codes.
+
+
     String dead = "\nCRASH!!\n\tThere were no survivors.\n\n";
     public static final int DEAD = -3;
     String crashed = "\nThe Starship crashed. Good luck getting back home. Elon is pissed.\n\n";
@@ -60,7 +62,7 @@ public class Vehicle {
     }
 
     public void adjustForBurn(int burnAmount) {
-        // set burn to burnamount requested
+        // set burn to burn  amount requested
         Burn = burnAmount;
         // save previousAltitude with current Altitude
         PrevAltitude = Altitude;
